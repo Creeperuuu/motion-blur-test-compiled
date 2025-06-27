@@ -17,4 +17,6 @@ jobs:
     - uses: nttld/setup-ndk@v1
       with:
         ndk-version: r26d
+        local-cache: true
+    - run: ls
     - run: cmake -DCMAKE_TOOLCHAIN_FILE=$PATH_TO_NDK/build/cmake/android.toolchain.cmake -DANDROID_ABI=armeabi-v7a ..
